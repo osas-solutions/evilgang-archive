@@ -2,3 +2,8 @@ body {
   background: black;
   color: white;
 }
+
+hr {
+  border: none;
+  border-top: 1px solid white;
+}
