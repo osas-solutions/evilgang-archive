@@ -1,6 +1,5 @@
 import { useEffect, useState, type ReactElement } from "react";
 import Artist from "./Artist"
-import type Song from "./SongInterface"
 
 function App() {
 

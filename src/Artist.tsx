@@ -1,4 +1,3 @@
-import type { AriaAttributes } from "react"
 import type Song from "./SongInterface"
 
 interface ArtistData {
