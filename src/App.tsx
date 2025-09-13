@@ -3,10 +3,7 @@ import Artist from "./Artist"
 import type Song from "./SongInterface";
 
 function App() {
-
   let [artists, setArtists] = useState<ReactElement[]>();
-
-  // let artists: ReactElement[] = [];
 
   useEffect(() => {
     fetch("data/data.json").then(async (resp) => {
@@ -23,13 +20,19 @@ function App() {
       }
 
       setArtists(lol);
-      // artists.push(<h1>Yo</h1>)
     });
   }, []);
 
   return (
     <>
       <h1>evilgang archives</h1>
+      <div className="notice">
+        <a>important: please do not link directly to the files as the urls WILL change!</a>
+        <br></br>
+        <a className="important">for takedowns/complains please email EMAIL@DOMAIN.COM</a>
+        <br></br>
+        <a>more coming soon if i can be bothered</a>
+      </div>
       <hr></hr>
       <div className="artistslist">
         {artists || <h1>loading boss please wait (probably broken idk)</h1>}

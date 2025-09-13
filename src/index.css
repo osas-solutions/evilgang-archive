@@ -1,5 +1,6 @@
 h1 {
   font-family: "Syncopate", sans-serif;
+  margin-bottom: 0px;
 }
 
 body {
@@ -16,4 +17,13 @@ hr {
   display: flex;
   gap: 10px;
   flex-direction: column;
+}
+
+.notice {
+  font-family: monospace;
+}
+
+.notice .important {
+  font-weight: bold;
+  color: #aaf;
 }
