@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactElement } from "react";
 import Artist from "./Artist"
+import type Song from "./SongInterface";
 
 function App() {
 
@@ -13,9 +14,12 @@ function App() {
 
       const data = await resp.json();
 
-      for(const lol2 of data) {
-        // console.log(lol2);
-        lol.push(<Artist username={lol2.username} displayname={lol2.displayname} tunes={[]}></Artist>)
+      for(const artist of data) {
+        let tunes: Song[] = [];
+        for(const tune of artist.tunes) {
+          tunes.push({name: tune.name, m4a: tune.m4a, mp3: tune.mp3});
+        }
+        lol.push(<Artist username={artist.username} displayname={artist.displayname} tunes={tunes}></Artist>)
       }
 
       setArtists(lol);
@@ -25,9 +29,11 @@ function App() {
 
   return (
     <>
-      <h1>EEEEVILLL GANGGGGG ARRRCHIVVVESS</h1>
+      <h1>evilgang archives</h1>
       <hr></hr>
-      {artists || <h1>loading boss please wait (probably broken idk)</h1>}
+      <div className="artistslist">
+        {artists || <h1>loading boss please wait (probably broken idk)</h1>}
+      </div>
     </>
   )
 }

@@ -1,3 +1,7 @@
+h1 {
+  font-family: "Syncopate", sans-serif;
+}
+
 body {
   background: black;
   color: white;
@@ -6,4 +10,10 @@ body {
 hr {
   border: none;
   border-top: 1px solid white;
+}
+
+.artistslist {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }

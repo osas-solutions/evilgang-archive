@@ -1,0 +1,13 @@
+.song {
+    display: flex;
+    gap: 20px;
+}
+
+.song > .download {
+    cursor: pointer;
+    color: #aaaaff;
+}
+
+.song > .download:hover {
+    text-decoration: underline;
+}
